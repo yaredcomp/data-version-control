@@ -23,8 +23,6 @@ def preprocess(image):
     resized = resize(image, (100, 100, 3))
     reshaped = resized.reshape((1, 30000))
     return reshaped
-
-
 def load_data(data_path):
     df = pd.read_csv(data_path)
     labels = load_labels(data_frame=df, column_name="label")
